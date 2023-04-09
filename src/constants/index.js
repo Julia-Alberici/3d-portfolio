@@ -7,14 +7,15 @@ import {
     typescript,
     html,
     css,
+    sass,
     reactjs,
-    redux,
+    angular,
     tailwind,
     nodejs,
-    mongodb,
+    c,
+    bootstrap,
     git,
-    figma,
-    docker,
+    mysql,
     meta,
     starbucks,
     tesla,
@@ -69,6 +70,18 @@ import {
       icon: css,
     },
     {
+      name: "Sass",
+      icon: sass,
+    },
+    {
+      name: "Tailwind CSS",
+      icon: tailwind,
+    },
+    {
+      name: "Bootstrap",
+      icon: bootstrap,
+    },
+    {
       name: "JavaScript",
       icon: javascript,
     },
@@ -81,37 +94,29 @@ import {
       icon: reactjs,
     },
     {
-      name: "Redux Toolkit",
-      icon: redux,
-    },
-    {
-      name: "Tailwind CSS",
-      icon: tailwind,
-    },
-    {
-      name: "Node JS",
-      icon: nodejs,
-    },
-    {
-      name: "MongoDB",
-      icon: mongodb,
+      name: "Angular JS",
+      icon: angular,
     },
     {
       name: "Three JS",
       icon: threejs,
     },
     {
+      name: "Node JS",
+      icon: nodejs,
+    },
+    {
+      name: "C#",
+      icon: c,
+    },
+    {
+      name: "MySql",
+      icon: mysql,
+    },
+    {
       name: "git",
       icon: git,
-    },
-    {
-      name: "figma",
-      icon: figma,
-    },
-    {
-      name: "docker",
-      icon: docker,
-    },
+    }
   ];
   
   const experiences = [
