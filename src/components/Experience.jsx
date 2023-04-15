@@ -33,7 +33,7 @@ const ExperienceCard = ({ experience }) => {
                     {experience.title}
                 </h3>
                 <p
-                    className="text-secondary text-[16px font-semibold]"
+                    className="text-secondary text-[16px] font-semibold"
                     style={{ margin: 0 }}>
                     {experience.company_name}
                 </p>

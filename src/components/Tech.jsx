@@ -47,9 +47,13 @@ const Tech = () => {
         <>
             <div
                 ref={ref}
-                className="flex flex-row flex-wrap justify-center gap-10">
+                className="flex flex-row flex-wrap justify-center gap-5 sm:gap-10 m-auto max-w-min xs:max-w-[300px] sm:max-w-[450px] md:max-w-none md:m-0">
                 {ballsRef.map((ballRef, i) => (
-                    <div key={i} ref={ballRef} className="w-28 h-28" />
+                    <div
+                        key={i}
+                        ref={ballRef}
+                        className="w-24 h-24 sm:w-28 sm:h-28"
+                    />
                 ))}
                 <Canvas
                     eventSource={ref}
