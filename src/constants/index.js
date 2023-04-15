@@ -16,14 +16,10 @@ import {
     bootstrap,
     git,
     mysql,
-    meta,
-    starbucks,
-    tesla,
     korp,
-    shopify,
-    carrent,
-    jobit,
-    tripguide,
+    clipz,
+    picsome,
+    weatherchecker,
     threejs,
   } from "../assets";
   
@@ -48,17 +44,13 @@ import {
       icon: web,
     },
     {
-      title: "React Native Developer",
+      title: "Frontend Developer",
       icon: mobile,
     },
     {
       title: "Backend Developer",
       icon: backend,
-    },
-    {
-      title: "Content Creator",
-      icon: creator,
-    },
+    }
   ];
   
   const technologies = [
@@ -178,16 +170,20 @@ import {
   
   const projects = [
     {
-      name: "Car Rent",
+      name: "Clipz",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-      tags: [
+        "Web-based platform for adding, editing, and watching videos. Providing a cool place to share clips among friends!",
+        tags: [
         {
-          name: "react",
+          name: "typescript",
+          color: "orange-text-gradient",
+        },
+        {
+          name: "angular",
           color: "blue-text-gradient",
         },
         {
-          name: "mongodb",
+          name: "firebase",
           color: "green-text-gradient",
         },
         {
@@ -195,50 +191,46 @@ import {
           color: "pink-text-gradient",
         },
       ],
-      image: carrent,
-      source_code_link: "https://github.com/",
+      image: clipz,
+      source_code_link: "https://github.com/Julia-Alberici/Clipz",
     },
     {
-      name: "Job IT",
+      name: "Pic Some",
       description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "User-friendly interface for favoriting photos and adding to cart, simulating an e-commerce experience.",
       tags: [
         {
           name: "react",
           color: "blue-text-gradient",
         },
         {
-          name: "restapi",
-          color: "green-text-gradient",
-        },
-        {
-          name: "scss",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: jobit,
-      source_code_link: "https://github.com/",
-    },
-    {
-      name: "Trip Guide",
-      description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-      tags: [
-        {
-          name: "nextjs",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "supabase",
-          color: "green-text-gradient",
-        },
-        {
           name: "css",
           color: "pink-text-gradient",
         },
       ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
+      image: picsome,
+      source_code_link: "https://github.com/Julia-Alberici/picSome",
+    },
+    {
+      name: "Weather Checker",
+      description:
+        "Website that gets accurate and up-to-date weather information for any city in a visually appealing and user-friendly format.",
+      tags: [
+        {
+          name: "react",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "axios",
+          color: "green-text-gradient",
+        },
+        {
+          name: "googlemapsapi",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: weatherchecker,
+      source_code_link: "https://github.com/Julia-Alberici/Weather-Checker",
     },
   ];
   

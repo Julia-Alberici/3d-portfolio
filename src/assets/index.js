@@ -22,15 +22,11 @@ import bootstrap from "./tech/bootstrap.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
 import korp from "./company/korp.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import clipz from "./clipz.png";
+import picsome from "./picsome.png";
+import weatherchecker from "./weatherchecker.jpg";
 
 export {
   logo,
@@ -55,12 +51,8 @@ export {
   bootstrap,
   typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
   korp,
-  carrent,
-  jobit,
-  tripguide,
+  clipz,
+  picsome,
+  weatherchecker,
 };
