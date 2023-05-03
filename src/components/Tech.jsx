@@ -2,7 +2,12 @@ import { SectionWrapper } from "../hoc";
 import { technologies } from "../constants";
 import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, View } from "@react-three/drei";
+import {
+    OrbitControls,
+    Preload,
+    View,
+    PerspectiveCamera,
+} from "@react-three/drei";
 import CanvasLoader from "./Loader";
 import useRefs from "react-use-refs";
 import Ball from "./canvas/Ball";
@@ -62,9 +67,14 @@ const Tech = () => {
                         {ballsRef.map((ballRef, i) => (
                             <View
                                 key={technologies[i].name + i}
-                                track={ballRef}>
+                                track={ballRef}
+                                index={i}>
                                 <Ball imgUrl={technologies[i].icon} />
-                                <OrbitControls enableZoom={false} />
+                                <PerspectiveCamera
+                                    makeDefault
+                                    position={[0, 0, 7]}
+                                />
+                                <OrbitControls makeDefault enableZoom={false} />
                             </View>
                         ))}
                     </Suspense>
