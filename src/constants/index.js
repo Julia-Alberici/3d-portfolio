@@ -91,10 +91,6 @@ import {
       icon: angular,
     },
     {
-      name: "Three JS",
-      icon: threejs,
-    },
-    {
       name: "Node JS",
       icon: nodejs,
     },
@@ -105,10 +101,6 @@ import {
     {
       name: "MySql",
       icon: mysql,
-    },
-    {
-      name: "git",
-      icon: git,
     }
   ];
   

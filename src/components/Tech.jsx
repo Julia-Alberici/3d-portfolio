@@ -27,8 +27,6 @@ const Tech = () => {
         view9,
         view10,
         view11,
-        view12,
-        view13,
     ] = useRefs();
 
     const ballsRef = [
@@ -44,15 +42,13 @@ const Tech = () => {
         view9,
         view10,
         view11,
-        view12,
-        view13,
     ];
 
     return (
         <>
             <div
                 ref={ref}
-                className="flex flex-row flex-wrap justify-center gap-5 sm:gap-10 m-auto max-w-min xs:max-w-[300px] sm:max-w-[450px] md:max-w-none md:m-0">
+                className="flex flex-row flex-wrap justify-center gap-5 sm:gap-10 m-auto max-w-min xs:max-w-[300px] sm:max-w-[450px] md:max-w-[1000px]">
                 {ballsRef.map((ballRef, i) => (
                     <div
                         key={i}
