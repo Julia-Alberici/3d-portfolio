@@ -9,7 +9,7 @@ const TechCard = ({ index, title, icon }) => {
     return (
         <Tilt className="w-[150px]">
             <motion.div
-                variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
+                variants={fadeIn("right", "spring", 0.5 * index, 0.5)}
                 className="w-full green-pink-gradient p-[3px] rounded-[40%] shadow-card">
                 <div
                     options={{ max: 45, scale: 1, speed: 450 }}
