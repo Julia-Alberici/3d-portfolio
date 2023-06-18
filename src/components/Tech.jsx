@@ -1,82 +1,45 @@
 import { SectionWrapper } from "../hoc";
 import { technologies } from "../constants";
-import { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
-import {
-    OrbitControls,
-    Preload,
-    View,
-    PerspectiveCamera,
-} from "@react-three/drei";
-import CanvasLoader from "./Loader";
-import useRefs from "react-use-refs";
-import Ball from "./canvas/Ball";
+
+import Tilt from "react-parallax-tilt";
+import { motion } from "framer-motion";
+import { fadeIn } from "../utils/motion";
+
+const TechCard = ({ index, title, icon }) => {
+    return (
+        <Tilt className="xs:w-[150px] w-full">
+            <motion.div
+                variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
+                className="w-full green-pink-gradient p-[3px] rounded-[40%] shadow-card">
+                <div
+                    options={{ max: 45, scale: 1, speed: 450 }}
+                    className="bg-tertiary rounded-[20px] p-5 flex justify-center items-center flex-col aspect-square">
+                    <h3 className="text-white text-[15px] text-center">
+                        {title}
+                    </h3>
+                    <img
+                        src={icon}
+                        alt={title}
+                        className="w-14 h-14 object-contain"
+                    />
+                </div>
+            </motion.div>
+        </Tilt>
+    );
+};
 
 const Tech = () => {
-    const [
-        ref,
-        view0,
-        view1,
-        view2,
-        view3,
-        view4,
-        view5,
-        view6,
-        view7,
-        view8,
-        view9,
-        view10,
-        view11,
-    ] = useRefs();
-
-    const ballsRef = [
-        view0,
-        view1,
-        view2,
-        view3,
-        view4,
-        view5,
-        view6,
-        view7,
-        view8,
-        view9,
-        view10,
-        view11,
-    ];
-
     return (
         <>
-            <div
-                ref={ref}
-                className="flex flex-row flex-wrap justify-center gap-5 sm:gap-10 m-auto max-w-min xs:max-w-[300px] sm:max-w-[450px] md:max-w-[1000px]">
-                {ballsRef.map((ballRef, i) => (
-                    <div
-                        key={i}
-                        ref={ballRef}
-                        className="w-24 h-24 sm:w-28 sm:h-28"
+            <div className="flex flex-wrap justify-around gap-10">
+                {technologies.map((tech, index) => (
+                    <TechCard
+                        key={index}
+                        title={tech.name}
+                        icon={tech.icon}
+                        index={index}
                     />
                 ))}
-                <Canvas
-                    eventSource={ref}
-                    style={{ position: "fixed", top: "0px", left: "0px" }}>
-                    <Suspense fallback={<CanvasLoader />}>
-                        {ballsRef.map((ballRef, i) => (
-                            <View
-                                key={technologies[i].name + i}
-                                track={ballRef}
-                                index={i}>
-                                <Ball imgUrl={technologies[i].icon} />
-                                <PerspectiveCamera
-                                    makeDefault
-                                    position={[0, 0, 7]}
-                                />
-                                <OrbitControls makeDefault enableZoom={false} />
-                            </View>
-                        ))}
-                    </Suspense>
-
-                    <Preload all />
-                </Canvas>
             </div>
         </>
     );
