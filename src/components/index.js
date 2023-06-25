@@ -1,12 +1,12 @@
 import { EarthCanvas, StarsCanvas } from './canvas';
-import Hero from './Hero';
+import Hero from './hero/Hero.lazy';
 import Navbar from './Navbar';
-import About from './About';
-import Tech from './Tech';
-import Experience from './Experience';
-import Works from './Works';
+import About from './about/About.lazy';
+import Tech from './tech/Tech.lazy';
+import Experience from './experience/Experience.lazy';
+import Works from './works/Works.lazy';
 import Feedbacks from './Feedbacks';
-import Contact from './Contact';
+import Contact from './contact/Contact.lazy';
 
 export {
   Hero,
