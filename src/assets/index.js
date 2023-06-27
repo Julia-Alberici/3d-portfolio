@@ -28,6 +28,8 @@ import clipz from "./clipz.png";
 import picsome from "./picsome.png";
 import weatherchecker from "./weatherchecker.jpg";
 
+import resume from "./resume.pdf";
+
 export {
   logo,
   backend,
@@ -55,4 +57,5 @@ export {
   clipz,
   picsome,
   weatherchecker,
+  resume
 };

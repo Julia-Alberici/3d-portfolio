@@ -1,11 +1,28 @@
 import { motion } from "framer-motion";
 
 import { styles } from "../../styles";
+import { resume } from "../../assets";
 
-const ContactInfoButton = ({ children }) => {
+const ContactInfoButton = ({ children, download, href }) => {
+    const handleClick = () => {
+        if (!download) {
+            window.open(href, "_blank");
+            return;
+        }
+
+        const link = document.createElement("a");
+        link.href = resume;
+        link.setAttribute("download", download);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
     return (
         <div className="green-pink-gradient p-[2px] mt-5 rounded-full inline-block">
-            <button className="bg-tertiary p-2 rounded-full w-[40px] h-[40px] md:w-[60px] md:h-[60px]">
+            <button
+                onClick={handleClick}
+                className="bg-tertiary p-2 rounded-full w-[40px] h-[40px] md:w-[60px] md:h-[60px]">
                 {children}
             </button>
         </div>
@@ -30,13 +47,15 @@ const Hero = () => {
                         <br className="sm:block hidden" /> web applications
                     </p>
                     <div className="flex gap-3">
-                        <ContactInfoButton>
+                        <ContactInfoButton
+                            download="Julia-Alberici-resume"
+                            href={resume}>
                             <span className="font-extrabold">CV</span>
                         </ContactInfoButton>
-                        <ContactInfoButton>
+                        <ContactInfoButton href="https://www.linkedin.com/in/julia-alberici-787109237/">
                             <i className="fa-brands fa-linkedin-in fa-lg" />
                         </ContactInfoButton>
-                        <ContactInfoButton>
+                        <ContactInfoButton href="https://github.com/Julia-Alberici">
                             <i className="fa-brands fa-github-alt fa-lg" />
                         </ContactInfoButton>
                     </div>
